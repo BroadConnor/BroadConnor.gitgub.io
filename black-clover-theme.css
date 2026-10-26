@@ -1,0 +1,67 @@
+/* Black Clover-inspired theme: load AFTER styles.css */
+:root { --bc-black:#090a0d; --bc-ink:#121317; --bc-panel:#191a20; --bc-red:#b82e3b; --bc-bright:#ed5962; --bc-gold:#c6a46a; --bc-ivory:#e9e2d8; }
+html { scroll-behavior:smooth; }
+body { background:var(--bc-black); color:var(--bc-ivory); }
+body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:-1; opacity:.13; background-image:radial-gradient(circle at 25% 18%,#8c2937 0%,transparent 36%),radial-gradient(circle at 83% 72%,#80643c 0%,transparent 32%); }
+.accent,.section-label,.intro,.eyebrow,.text-link,.project-link { color:var(--bc-gold); }
+.gradient-text { color:var(--bc-bright); background:linear-gradient(110deg,#f3c58d 0%,#e85c66 50%,#ad3447 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.brand-icon { color:var(--bc-bright); }
+.brand-clover { color:var(--bc-gold); font-size:.72em; margin-left:.2em; }
+.header { border-bottom-color:rgba(198,164,106,.18); }
+.header nav a:hover,.footer a:hover { color:var(--bc-gold); }
+.btn.primary,.nav-cta { background:linear-gradient(115deg,#8e202f,#d04450); color:#fff; border-color:#d04450; box-shadow:0 10px 30px rgba(146,32,47,.2); }
+.btn.primary:hover,.nav-cta:hover { box-shadow:0 12px 36px rgba(208,68,80,.3); }
+.btn.secondary { border-color:rgba(198,164,106,.45); color:var(--bc-ivory); }
+.btn.secondary:hover { border-color:var(--bc-gold); }
+.status-dot { background:var(--bc-bright); box-shadow:0 0 14px rgba(237,89,98,.7); }
+.glow-one { background:#6e1727; opacity:.22; }
+.glow-two { background:#8c672f; opacity:.14; }
+.editor,.skill-card,.project-card,.contact-box { background-color:var(--bc-panel); border-color:rgba(198,164,106,.22); box-shadow:0 15px 45px rgba(0,0,0,.16); }
+.editor-top { border-bottom-color:rgba(198,164,106,.22); }
+.editor-code .purple { color:#d99baf; }
+.editor-code .green { color:#e6bd78; }
+.editor-code .blue { color:#e76d74; }
+.editor-code em { color:#827c79; }
+.orbit { border-color:rgba(198,164,106,.18); }
+.floating-tag { border-color:rgba(198,164,106,.4); color:var(--bc-gold); background:#18151a; }
+.skill-icon { color:var(--bc-gold); }
+.skill-card:hover,.project-card:hover { border-color:rgba(237,89,98,.6); box-shadow:0 16px 45px rgba(142,32,47,.16); }
+.tags span { border-color:rgba(198,164,106,.25); color:#e4c99b; }
+.project-visual.calc { background:linear-gradient(135deg,#31131c,#8b2937); }
+.project-visual.bmi { background:linear-gradient(135deg,#27221d,#6b4637); }
+.project-visual.recipes { background:linear-gradient(135deg,#241b21,#56303c); }
+.visual-label { color:#f2d8b0; }
+.contact-box { background:linear-gradient(120deg,#19171b,#27181e); }
+.project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr)); gap:24px; }
+.project-card { overflow:hidden; }
+.project-image { width:100%; height:100%; object-fit:cover; display:block; }
+.project-visual:has(.project-image) { overflow:hidden; }
+.project-image.contain { object-fit:contain; padding:12px; }
+@media (prefers-reduced-motion:reduce) { html {scroll-behavior:auto;} .skill-card,.project-card,.btn {transition:none;} }
+
+/* Fine tuning: remove remaining blue-violet accents from original theme */
+:root{--bg:#090a0d;--surface:#151519;--surface2:#1d1b20;--line:#43343a;--text:#f0e9df;--muted:#b7aeb1;--accent:#c6a46a;--accent2:#e15c65}
+::selection{background:#8f2937;color:#fff}
+.eyebrow{border-color:#b82e3b66;background:#b82e3b14}
+.intro span{color:var(--bc-gold)}
+.hero-meta{color:#b8a9a5}
+.nav-cta{background:transparent;box-shadow:none;border:1px solid #7b4347}
+.nav-cta:hover{background:#72232d}
+.editor{background:#141318ed;box-shadow:0 40px 100px #0009,0 0 70px #922f3b21}
+.editor-top{color:#b7a5a0}
+.dots i:nth-child(2){background:#d5aa67}.dots i:nth-child(3){background:#b3a69a}
+.cursor{color:var(--bc-gold)}
+.skill-card{background:linear-gradient(150deg,#211c20,#131216)}
+.skill-icon{background:#b82e3b1e}
+.muted{color:#9c8f8e}
+.key-grid i:nth-child(4n){background:#8e2a38}
+.device{border-color:#5b4147;background:#1b171d}
+.key-grid i{background:#332931;color:#e8d8d7}
+.bmi-widget{background:#f4e8dc;color:#50343a}
+.project-top{color:#c5aaa1}
+.footer{color:#a99895}
+.project-visual img.project-image{width:100%;height:100%;object-fit:cover}
+.project-visual img.project-image.contain{object-fit:contain}
+/* Optional decorative five-leaf clover image, add img inside .hero-art */
+.clover-emblem{position:absolute;width:90px;max-width:24%;top:-12px;right:5px;z-index:4;opacity:.88;filter:drop-shadow(0 0 12px #b82e3b);pointer-events:none}
+@media(max-width:650px){.clover-emblem{width:62px;top:0;right:0}}
